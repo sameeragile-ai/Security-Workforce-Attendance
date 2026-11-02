@@ -1,0 +1,336 @@
+export type Language = 'en' | 'ar';
+
+export const translations = {
+  en: {
+    // Brand & App
+    appName: 'Wardiya',
+    appTagline: 'Workforce & Attendance for Security Operations',
+    taglineAr: 'وردية — إدارة القوى الأمنية والحضور',
+    shift: 'Shift',
+    brandAman: 'Aman Guard Services',
+    brandNile: 'Nile Facility Group',
+    brandGroup: 'Group Management',
+
+    // Statuses
+    onPost: 'ON POST',
+    offDuty: 'OFF DUTY',
+    enRoute: 'EN ROUTE',
+    late: 'LATE',
+    absent: 'ABSENT',
+    synced: 'SYNCED',
+    pending: 'PENDING',
+    signed: 'SIGNED',
+    urgent: 'URGENT',
+    breach: 'BREACH',
+    optimal: 'OPTIMAL',
+    warning: 'WARNING',
+    critical: 'CRITICAL',
+
+    // Navigation Tabs
+    tabToday: 'Today',
+    tabIncidents: 'Incidents',
+    tabCheckIn: 'Check-In',
+    tabMessages: 'Messages',
+    tabMe: 'Me',
+    tabOpsMap: 'Ops Map',
+    tabAlerts: 'Alerts',
+    tabDispatch: 'Dispatch',
+    tabShifts: 'Shifts',
+
+    // Today Screen
+    assignedSite: 'Assigned Site',
+    perimeterStatusInside: 'INSIDE PERIMETER',
+    perimeterStatusOutside: 'OUTSIDE PERIMETER',
+    distanceFromCenter: 'from site center',
+    shiftHours: 'Shift Hours',
+    nextSelfieWindow: 'Random Selfie Check',
+    hoursThisWeek: 'Hours This Week',
+    weeklyAttendance: 'Weekly Attendance Overview',
+    regularHours: 'Regular',
+    overtimeHours: 'Overtime',
+    autoCheckInActive: 'Auto-Attendance Active',
+    autoCheckInSub: 'Geofence will register entry & exit automatically',
+    outsideWarning: 'You are outside the assigned site geofence',
+    insideSuccess: 'Geofence verified. You are within the assigned post.',
+    tamperProofSignature: 'Signed with SHA-256 device key',
+
+    // Center Action / Check-In Sheet
+    checkInAction: 'Check-In to Post',
+    checkOutAction: 'Check-Out from Post',
+    biometricVerification: 'Biometric Face Verification',
+    verifyingFace: 'Analyzing face alignment…',
+    faceMatched: 'Face verification passed (97% match)',
+    holdForSos: 'Press & Hold (2s) for Urgent SOS',
+    sosTriggered: 'SOS Emergency Signal Transmitted',
+    cancel: 'Cancel',
+    confirm: 'Confirm',
+    disabledReasonGeofence: 'Disabled: Must be within 150m perimeter to check-in',
+
+    // Incidents
+    incidentReports: 'Incident Reports',
+    newReport: 'Log Incident',
+    incidentType: 'Incident Type',
+    intrusion: 'Unauthorized Intrusion',
+    fire: 'Fire / Hazard',
+    medical: 'Medical Emergency',
+    damage: 'Equipment / Property Damage',
+    suspicious: 'Suspicious Activity',
+    other: 'General Observation',
+    severity: 'Severity',
+    low: 'Low',
+    medium: 'Medium',
+    high: 'High',
+    recordVoiceNote: 'Record Voice Note',
+    recording: 'Recording audio…',
+    stopRecording: 'Done Recording',
+    attachPhoto: 'Capture / Attach Photo',
+    autoTaggedData: 'Auto-Tagged Telemetry',
+    submitReport: 'Submit Incident Report',
+    queuedOffline: 'Report saved offline. Will sync when online.',
+
+    // Messages
+    broadcasts: 'Operations Broadcasts',
+    urgentEscalation: 'Urgent Escalation Chain',
+    siteTeam: 'Site Guard Team',
+    supervisorChat: 'Supervisor Direct',
+    acknowledge: 'Acknowledge Notice',
+    acknowledged: 'Acknowledged',
+    minutesRemaining: 'min remaining before escalation',
+    escalatedTo: 'Escalated to',
+
+    // Profile & Me
+    clearanceBadge: 'Security Clearance Badge',
+    employeeId: 'Employee ID',
+    nationalId: 'National ID',
+    registeredPhone: 'Registered Mobile',
+    deviceBinding: 'Registered Device',
+    deviceBound: 'Bound & Verified',
+    requests: 'Requests & Approvals',
+    requestLeave: 'Request Leave',
+    requestAdvance: 'Salary Advance',
+    requestRaise: 'Performance Review',
+    statusSupervisor: 'Under Supervisor Review',
+    statusHr: 'HR Verification',
+    statusFinance: 'Finance Approved',
+    payslips: 'Payslips & Salary',
+    netSalary: 'Net Salary',
+    currencyEgp: 'EGP',
+    training: 'Training & Certifications',
+    uniformEquipment: 'Issued Uniform & Tactical Kit',
+    settings: 'App Settings',
+    logout: 'Switch Account / Logout',
+
+    // Supervisor Mode
+    opsMapTitle: 'Cairo & Giza Operations Command',
+    liveCoverage: 'Live Site Coverage',
+    sitesSecured: 'Sites Secured',
+    guardsOnDuty: 'Guards On Duty',
+    coverageGaps: 'Coverage Gaps',
+    standbyPool: 'Available Standby Pool',
+    dispatchGuard: 'Dispatch Guard',
+    dispatchedSuccess: 'Guard dispatched to site',
+    shiftSchedule: '24/7 Shift Schedule',
+    overtimeAlerts: 'Overtime & Absence Flags',
+
+    // Offline & Sync
+    offlineModeBanner: "You're offline — check-ins & reports are saved locally",
+    syncQueueTitle: 'Offline Sync Queue',
+    syncAllNow: 'Sync Pending Events Now',
+    syncingItems: 'Synchronizing cryptographic logs…',
+    allSynced: 'All logs synced with operations room',
+
+    // Anti-Fraud
+    mockLocationTitle: 'MOCK LOCATION DETECTED',
+    mockLocationBody: 'Fake GPS spoofing detected. Event flagged and operations room alerted.',
+    selfieRequiredTitle: 'Random Verification Required',
+    selfieRequiredBody: 'Please submit a live selfie within 5 minutes to maintain on-post status.',
+
+    // Demo Controls
+    demoControls: 'Demo Control Panel',
+    switchBrand: 'Switch Brand',
+    switchRole: 'Switch Role',
+    simulateMovement: 'GPS Movement Simulator',
+    walkInside: 'Walk into Site (42m)',
+    walkOutside: 'Walk outside Site (1.3km)',
+    teleportMock: 'Spoof GPS (Mock Location)',
+    toggleOffline: 'Toggle Offline Mode',
+    killApp: 'Simulate App Background Sleep',
+    triggerSelfie: 'Trigger Random Selfie Check',
+    triggerSos: 'Trigger SOS Escalation',
+    resetData: 'Reset Demo Data',
+  },
+  ar: {
+    // Brand & App
+    appName: 'وردية',
+    appTagline: 'إدارة القوى الأمنية والحضور الذكي',
+    taglineAr: 'وردية — إدارة القوى الأمنية والحضور',
+    shift: 'وردية',
+    brandAman: 'أمان لخدمات الحراسة والأمن',
+    brandNile: 'مجموعة النيل لإدارة المرافق',
+    brandGroup: 'إدارة المجموعة',
+
+    // Statuses
+    onPost: 'في الموقع',
+    offDuty: 'خارج الخدمة',
+    enRoute: 'في الطريق',
+    late: 'متأخر',
+    absent: 'غائب',
+    synced: 'مُزامن',
+    pending: 'معلق',
+    signed: 'موقّع',
+    urgent: 'طوارئ',
+    breach: 'اختراق',
+    optimal: 'مكتمل',
+    warning: 'نقص',
+    critical: 'حرج',
+
+    // Navigation Tabs
+    tabToday: 'اليوم',
+    tabIncidents: 'البلاغات',
+    tabCheckIn: 'تسجيل الحضور',
+    tabMessages: 'الرسائل',
+    tabMe: 'حسابي',
+    tabOpsMap: 'خريطة العمليات',
+    tabAlerts: 'التنبيهات',
+    tabDispatch: 'التوجيه',
+    tabShifts: 'الورديات',
+
+    // Today Screen
+    assignedSite: 'الموقع المكلّف به',
+    perimeterStatusInside: 'داخل النطاق الأمني',
+    perimeterStatusOutside: 'خارج النطاق الأمني',
+    distanceFromCenter: 'من نقطة تمركز الموقع',
+    shiftHours: 'ساعات الوردية',
+    nextSelfieWindow: 'التحقق العشوائي بالصورة',
+    hoursThisWeek: 'ساعات هذا الأسبوع',
+    weeklyAttendance: 'نظرة عامة على ساعات العمل',
+    regularHours: 'أساسي',
+    overtimeHours: 'إضافي',
+    autoCheckInActive: 'تسجيل الحضور الجغرافي مفعّل',
+    autoCheckInSub: 'النطاق الذكي سيسجل الحضور والانصراف تلقائياً',
+    outsideWarning: 'أنت حالياً خارج النطاق الجغرافي للموقع المكلّف به',
+    insideSuccess: 'تم التحقق من النطاق. أنت الآن في نقطة خدمتك.',
+    tamperProofSignature: 'موقّع رقمياً بتشفير SHA-256 من الجهاز',
+
+    // Center Action / Check-In Sheet
+    checkInAction: 'تسجيل الدخول للخدمة',
+    checkOutAction: 'تسجيل الخروج من الخدمة',
+    biometricVerification: 'التحقق الحيوي للوجه',
+    verifyingFace: 'جاري مطابقة ملامح الوجه…',
+    faceMatched: 'تم التحقق بنجاح (مطابقة 97%)',
+    holdForSos: 'اضغط واستمر (ثانيتان) لإشارة استغاثة SOS',
+    sosTriggered: 'تم إرسال نداء الاستغاثة لغرفة العمليات',
+    cancel: 'إلغاء',
+    confirm: 'تأكيد',
+    disabledReasonGeofence: 'معطل: يجب التواجد داخل نطاق 150 متراً من الموقع لتسجيل الحضور',
+
+    // Incidents
+    incidentReports: 'سجل البلاغات والأحداث',
+    newReport: 'تسجيل بلاغ أمني',
+    incidentType: 'نوع البلاغ',
+    intrusion: 'اقتحام / دخول غير مصرح',
+    fire: 'حريق / خطر بيئي',
+    medical: 'حالة طبية طارئة',
+    damage: 'تلفيات ومعدات معطلة',
+    suspicious: 'نشاط أو شخص مشبوه',
+    other: 'ملاحظة عامة',
+    severity: 'درجة الخطورة',
+    low: 'منخفضة',
+    medium: 'متوسطة',
+    high: 'عالية',
+    recordVoiceNote: 'تسجيل ملاحظة صوتية',
+    recording: 'جاري التسجيل الصوتي…',
+    stopRecording: 'إنهاء التسجيل',
+    attachPhoto: 'التقاط أو إرفاق صورة',
+    autoTaggedData: 'البيانات الموثقة تلقائياً',
+    submitReport: 'إرسال البلاغ لغرفة العمليات',
+    queuedOffline: 'تم حفظ البلاغ محلياً. ستتم المزامنة فور الاتصال.',
+
+    // Messages
+    broadcasts: 'تعميمات إدارة العمليات',
+    urgentEscalation: 'سلسلة التصعيد الفوري',
+    siteTeam: 'طاقم حراسة الموقع',
+    supervisorChat: 'المشرف المباشر',
+    acknowledge: 'تأكيد القراءة والاستلام',
+    acknowledged: 'تم الاستلام',
+    minutesRemaining: 'دقيقة متبقية قبل التصعيد للمستوى التالي',
+    escalatedTo: 'تم التصعيد إلى',
+
+    // Profile & Me
+    clearanceBadge: 'بطاقة الهوية والتصريح الأمني',
+    employeeId: 'الرقم الوظيفي',
+    nationalId: 'الرقم القومي',
+    registeredPhone: 'رقم الهاتف المسجل',
+    deviceBinding: 'الجهاز المقترن',
+    deviceBound: 'مقترن وموثق',
+    requests: 'الطلبات والموافقات',
+    requestLeave: 'طلب إجازة',
+    requestAdvance: 'سلفة على الراتب',
+    requestRaise: 'تقييم ترقية / علاوة',
+    statusSupervisor: 'قيد مراجعة المشرف',
+    statusHr: 'مراجعة الموارد البشرية',
+    statusFinance: 'معتمد من الإدارة المالية',
+    payslips: 'مفردات المرتب والرواتب',
+    netSalary: 'صافي الراتب',
+    currencyEgp: 'ج.م',
+    training: 'التدريبات والشهادات الأمنية',
+    uniformEquipment: 'العهدة والمهمات الميدانية',
+    settings: 'إعدادات التطبيق',
+    logout: 'تبديل الحساب / تسجيل الخروج',
+
+    // Supervisor Mode
+    opsMapTitle: 'غرفة عمليات القاهرة والجيزة الميدانية',
+    liveCoverage: 'تغطية المواقع الحية',
+    sitesSecured: 'مواقع تحت التأمين',
+    guardsOnDuty: 'أفراد حراسة في الخدمة',
+    coverageGaps: 'مواقع بها نقص حراسة',
+    standbyPool: 'قوة الاحتياط الجاهزة',
+    dispatchGuard: 'توجيه فرد الحراسة للموقع',
+    dispatchedSuccess: 'تم إرسال أمر التوجيه للفرد',
+    shiftSchedule: 'جدول الورديات 24/7',
+    overtimeAlerts: 'تنبيهات التأخير والغياب',
+
+    // Offline & Sync
+    offlineModeBanner: 'أنت في وضع عدم الاتصال — الحضور والبلاغات موثقة ومحفوظة بالجهاز',
+    syncQueueTitle: 'قائمة المزامنة المعلقة',
+    syncAllNow: 'مزامنة السجلات الآن',
+    syncingItems: 'جاري إرسال السجلات المشفرة…',
+    allSynced: 'تمت مزامنة كافة السجلات مع السيرفر الرئيسي',
+
+    // Anti-Fraud
+    mockLocationTitle: 'تم رصد موقع وهمي (GPS Spoofing)',
+    mockLocationBody: 'تم اكتشاف تلاعب بالإحداثيات. تم حظر تسجيل الحضور وإبلاغ المشرف فوراً.',
+    selfieRequiredTitle: 'مطلوب التحقق المفاجئ بالصورة',
+    selfieRequiredBody: 'يرجى التقاط صورة شخصية مباشرة خلال 5 دقائق لتأكيد التواجد في الموقع.',
+
+    // Demo Controls
+    demoControls: 'لوحة التحكم في العرض التجريبي',
+    switchBrand: 'تغيير العلامة التجارية',
+    switchRole: 'تغيير الصلاحية / الدور',
+    simulateMovement: 'محاكي الحركة الميدانية',
+    walkInside: 'الدخول لنقطة الخدمة (42م)',
+    walkOutside: 'الخروج خارج النطاق (1.3 كم)',
+    teleportMock: 'تزييف إحداثيات (Mock GPS)',
+    toggleOffline: 'تبديل وضع عدم الاتصال',
+    killApp: 'محاكاة وضع سكون التطبيق',
+    triggerSelfie: 'طلب تحقق مفاجئ بالصورة',
+    triggerSos: 'إطلاق استغاثة طارئة SOS',
+    resetData: 'إعادة ضبط البيانات التجريبية',
+  },
+};
+
+/**
+ * Converts numbers between Western (0-9) and Eastern Arabic (٠-٩)
+ */
+export function formatNumber(
+  num: number | string,
+  lang: Language = 'en',
+  useEasternNumerals = false
+): string {
+  const str = String(num);
+  if (lang === 'ar' && useEasternNumerals) {
+    const easternDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+    return str.replace(/\d/g, d => easternDigits[parseInt(d, 10)]);
+  }
+  return str;
+}

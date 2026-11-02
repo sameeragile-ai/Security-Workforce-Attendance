@@ -1,0 +1,116 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --brand-midnight: #0B1626;
+    --brand-accent: #FFB020;
+    --brand-accent-glow: rgba(255, 176, 32, 0.35);
+    --brand-structural: #101F35;
+    --brand-surface: #0E141D;
+  }
+
+  [data-brand="nile"] {
+    --brand-midnight: #0A2E2C;
+    --brand-accent: #D4A857;
+    --brand-accent-glow: rgba(212, 168, 87, 0.35);
+    --brand-structural: #123C3A;
+    --brand-surface: #0A1C1B;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom Tactical & Arabic Typography */
+.font-display {
+  font-family: 'Barlow Condensed', 'Alexandria', sans-serif;
+}
+
+[dir="rtl"] .font-display {
+  font-family: 'Alexandria', 'Barlow Condensed', sans-serif;
+}
+
+.font-body {
+  font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+[dir="rtl"] .font-body {
+  font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-mono-telemetry {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tactical Background Blueprint Grid */
+.bg-blueprint-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+.dark .bg-blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+/* Mashrabiya / Arabesque Geometric Watermark at 3% Opacity */
+.bg-mashrabiya {
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Leaflet Dark Filter for Tactical Operations Map */
+.dark-leaflet-map .leaflet-tile {
+  filter: brightness(0.65) invert(1) contrast(3) hue-rotate(200deg) saturate(0.35) brightness(0.7);
+}
+
+/* Smooth custom scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Radar Sweep Keyframe */
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radarSweep 6s linear infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}

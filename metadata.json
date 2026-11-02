@@ -1,0 +1,6 @@
+{
+  "name": "Wardiya — Security Workforce & Attendance",
+  "description": "Mission-critical mobile workforce management, offline-first geofenced attendance, anti-fraud telemetry, and live operations command for security & facility teams.",
+  "requestFramePermissions": ["geolocation", "camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
